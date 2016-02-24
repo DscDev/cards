@@ -1,33 +1,44 @@
-
-.flipper{
+.flipper, .front, .back {
   width: 500px;
   height: 500px;
-  border:1px solid black;
-  margin:auto;
+}
+.flipper {
+  /*border: 1px solid black;*/
+  margin: auto;
   margin-top: 150px;
   -webkit-perspective: 900px;
 }
-
-.front{
-  width: 500px;
-  height: 500px;
-  background: lightblue;
-  transition: 1s all ease;
+.front {
   backface-visibility: hidden;
+  /*background: #EEE;*/
   position: absolute;
+  transition: 0.6s all ease;
 }
-.back{
-  width: 500px;
-  height: 500px;
-  background: lightgreen;
-  transition: 1s all ease;
+.back {
   backface-visibility: hidden;
+  /*background: #EEE;*/
+  position: absolute;
   transform: rotateX(-180deg);
+  transition: 0.6s all ease;
 }
-
-.flipper:hover .front{
+.flipper:hover .front {
   transform: rotateX(180deg);
 }
-.flipper:hover .back{
+.flipper:hover .back {
   transform: rotateX(0deg);
+}
+
+/*  */
+.front, .back {
+  border: 1px solid black;
+  background: #EEE;
+  text-align: center;
+  font-size: 450px;
+}
+.front{
+  color:orange;
+}
+
+.back{
+  color:blue;
 }
